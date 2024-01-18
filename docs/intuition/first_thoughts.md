@@ -15,16 +15,31 @@ from sklearn import preprocessing
 # split the data into training and testing dataset
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.4, random_state=0)
+
 # fit the training data
 scaler = preprocessing.StandardScaler().fit(X_train)
 X_train_transformed = scaler.transform(X_train)
+
 # or the following could have been `fit_transform`
 clf = svm.SVC(C=1).fit(X_train_transformed, y_train)
 X_test_transformed = scaler.transform(X_test)
+
 # scoring mechanism to determine the efficacy of the parameters
 clf.score(X_test_transformed, y_test)
 ```
 
 ### Few other considerations
 - we could also use `n_permutation` if required
-- 
+
+### Model
+Let's say we are able to represent a test case in a file in the
+following manner:
+
+```
+  DATAFRAME; CSV
+------------------
+LIST OF TEST CASES
+```
+
+Each test class can be a folder which contains a bunch of test files whose structure will be defined as above. The exact definition of these elements is still subject to the use cases.
+
