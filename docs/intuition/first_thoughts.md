@@ -42,4 +42,3 @@ LIST OF TEST CASES
 ```
 
 Each test class can be a folder which contains a bunch of test files whose structure will be defined as above. The exact definition of these elements is still subject to the use cases.
-

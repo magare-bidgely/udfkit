@@ -26,4 +26,9 @@ spent was less than 2. A test case in this case is a failure if even one of the 
 
 So in general on a high level, there could be a couple of test class 
 types: a polarized yes / no type and a linear type. There could be more
-but in the interest of keeping things simple, let's ignore other types.
+such as logistic but in the interest of keeping things simple, 
+let's ignore other types.
+
+### Actual example
+Let's follow it up with an actual example in a notebook environment in
+the notebook folder called first_run.ipynb. GL!
